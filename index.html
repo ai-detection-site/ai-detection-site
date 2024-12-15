@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI判定くん</title>
+    <!-- Google Fontsの追加 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chart.jsの追加（ソースマップエラーを回避するため、minified版を指定） -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <!-- CSSのリンク -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ヘッダー部分 -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <h1>AI 判定くん</h1>
+        <button id="themeToggle" aria-pressed="false">ダークモード</button>
+        <textarea id="textInput" placeholder="ここに文章を入力してください" aria-label="文章入力"></textarea>
+        <p id="charCount">文字数: 0</p>
+        <div class="button-group">
+            <button id="submitButton" aria-label="判定">判定</button>
+            <button id="copyButton" aria-label="コピー">コピー</button>
+            <button id="clearButton" aria-label="全消去">全消去</button>
+        </div>
+        <div id="scoreContainer">
+            <span id="score"></span>
+        </div>
+        <div id="infoText">スコアが高いほどAIの可能性が高い</div>
+
+        <div class="spinner" id="spinner" role="status" aria-live="polite"></div>
+        <div id="result">結果がここに表示されます</div>
+        <canvas id="resultChart" width="400" height="200" aria-label="判定結果のグラフ" role="img"></canvas>
+    </div>
+
+    
+    </div>
+    <!-- JavaScriptのリンク -->
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+

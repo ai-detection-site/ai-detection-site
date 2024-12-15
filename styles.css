@@ -1,0 +1,228 @@
+/* Google Fontsの適用 */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#charCount {
+    font-size: 14px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+#result {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+    min-height: 100px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.canvas-container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+}
+
+/* スピナースタイル */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #4CAF50;
+    animation: spin 1s ease infinite;
+    display: none;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ダークモードのスタイル */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode textarea {
+    background-color: #333333;
+    color: #ffffff;
+    border: 2px solid #555555;
+}
+
+body.dark-mode button {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode button:hover {
+    background-color: #444444;
+}
+
+body.dark-mode #result {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .spinner {
+    border-left-color: #ffffff;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    textarea {
+        height: 150px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #result {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+button:active {
+    transform: scale(0.95);
+}
+textarea:focus {
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+}
+
+
+
+
+
+#checkBtn {
+    display: block;
+    margin: 20px auto; /* ボタンの上下にスペースを追加 */
+}
+
+#scoreContainer {
+    margin-top: 10px; /* スコアの表示に間隔を追加 */
+    font-size: 24px;  /* スコアのフォントサイズ */
+    font-weight: bold;
+}
+
+#infoText {
+    margin-top: 15px; /* スコアとテキストの間にスペースを追加 */
+    font-size: 16px;  /* テキストのフォントサイズ */
+    color: gray;      /* テキストの色 */
+    text-align: center; /* テキストを中央に配置 */
+}
+
+
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
